@@ -35,4 +35,28 @@ public class HelloController {
         return new User(1, "Anmol");
     }
     
+    // Mini Exercises
+    // Sum
+    @GetMapping("/add/{a}/{b}")
+    public String getSum(@PathVariable int a, @PathVariable int b) {
+        return "The sum of a: " + a + " and b: " + b + " = " + (a + b);
+    }
+
+    // Multiply
+    @GetMapping("/multiply")
+    public String getProduct(
+        @RequestParam int a,
+        @RequestParam int b
+    ) {
+        return "The Product of a: " + a + " and b: " + b + " = " + (a * b);
+    }
+
+    // Returns JSON
+    @GetMapping("/profile/{name}/{age}")
+    public Person getPerson(
+        @PathVariable String name,
+        @PathVariable int age
+    ) {
+        return new Person("Anmol", 25);
+    }
 }

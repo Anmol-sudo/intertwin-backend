@@ -37,19 +37,19 @@ public class HelloController {
     
     // Mini Exercises
     // Sum
-    @GetMapping("/add/{a}/{b}")
-    public String getSum(@PathVariable int a, @PathVariable int b) {
-        return "The sum of a: " + a + " and b: " + b + " = " + (a + b);
-    }
+    // @GetMapping("/add/{a}/{b}")
+    // public String getSum(@PathVariable int a, @PathVariable int b) {
+    //     return "The sum of a: " + a + " and b: " + b + " = " + (a + b);
+    // }
 
     // Multiply
-    @GetMapping("/multiply")
-    public String getProduct(
-        @RequestParam int a,
-        @RequestParam int b
-    ) {
-        return "The Product of a: " + a + " and b: " + b + " = " + (a * b);
-    }
+    // @GetMapping("/multiply")
+    // public String getProduct(
+    //     @RequestParam int a,
+    //     @RequestParam int b
+    // ) {
+    //     return "The Product of a: " + a + " and b: " + b + " = " + (a * b);
+    // }
 
     // Returns JSON
     @GetMapping("/profile/{name}/{age}")

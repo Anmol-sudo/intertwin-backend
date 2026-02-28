@@ -28,4 +28,11 @@ public class HelloController {
     ) {
         return "Searching for " + keyword + ", page " + page;
     }
+
+    // Returning JSON
+    @GetMapping("/user") 
+    public User getUser() {
+        return new User(1, "Anmol");
+    }
+    
 }

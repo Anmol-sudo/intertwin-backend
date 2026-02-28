@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 // Control all routes
@@ -17,5 +18,14 @@ public class HelloController {
     @GetMapping("/hello/{name}")
     public String helloUser(@PathVariable String name) {
         return "Hello " + name + " 👋";
+    }
+
+    // Query Parameters
+    @GetMapping("/search")
+    public String search(
+        @RequestParam String keyword,
+        @RequestParam int page 
+    ) {
+        return "Searching for " + keyword + ", page " + page;
     }
 }
